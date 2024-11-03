@@ -16,4 +16,3 @@ if (strlen($_parametros)>0){
     $_parametros = [];
 }
 
-header("Access-Control-Allow-Origin: *");
