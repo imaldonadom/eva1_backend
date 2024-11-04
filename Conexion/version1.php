@@ -16,3 +16,19 @@ if (strlen($_parametros)>0){
     $_parametros = [];
 }
 
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+header("Content-Type: application/json; charset=UTF-8");
+
+$_header = null;
+try{
+    $_header = isset(getallheaders()['autorization']) ? getallheaders()['autorization'] : null;
+    if($_header === null){
+        throw new Exception('No tiene autorizacion');
+    }
+} catch(Exception $e) {
+    http_response_code(401);
+    echo json_decode(['error' => $e->getMessage()]);
+}
+
+$_token_get = 'Bearer get';
