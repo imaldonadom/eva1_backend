@@ -15,11 +15,11 @@ class Conexion
         $this->server = $_SERVER["HTTP_HOST"];
         $this->connection = null;
         $this->port = 3306;
-        $this->db = 'ciisa_backend_v1';
+        $this->db = 'ciisa_backend_v01';
 
         if ($this->server == 'localhost') {
             $this->host = 'localhost';
-            $this->username = 'ciisa_backend_v1';
+            $this->username = 'ciisa_backend_v01';
             $this->password = 'ciisa2024';
         }
     }
@@ -39,4 +39,3 @@ class Conexion
         mysqli_close($this->connection);
     }
 }
-?>
