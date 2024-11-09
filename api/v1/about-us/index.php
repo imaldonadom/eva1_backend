@@ -1,10 +1,19 @@
 <?php
-// Captura del encabezado de autorización directamente desde $_SERVER
-$authHeader = isset($_SERVER['HTTP_AUTHORIZATION']) ? $_SERVER['HTTP_AUTHORIZATION'] : null;
+// Permitir solicitudes de cualquier origen y definir métodos permitidos
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Content-Type: application/json; charset=UTF-8");
 
-if ($authHeader === 'ciisa') {
+// Captura del encabezado de autorización
+$authHeader = isset($_SERVER['HTTP_AUTHORIZATION']) ? $_SERVER['HTTP_AUTHORIZATION'] :
+              (isset($_SERVER['REDIRECT_HTTP_AUTHORIZATION']) ? $_SERVER['REDIRECT_HTTP_AUTHORIZATION'] : null);
+
+// Token esperado
+$expectedToken = 'ciisa';
+
+// Verificar si el token en el encabezado coincide con el esperado
+if ($authHeader === $expectedToken) {
     // Autenticación exitosa
-    // Simulación de datos de “Nosotros”
     $aboutUsData = [
         "company_name" => "CIISA",
         "mission" => "Proveer soluciones tecnológicas innovadoras para mejorar la eficiencia de nuestros clientes.",
@@ -17,13 +26,10 @@ if ($authHeader === 'ciisa') {
         ]
     ];
     
-    // Configuración del encabezado de respuesta y envío de datos en formato JSON
-    header('Content-Type: application/json');
+    // Respuesta con datos en formato JSON
     echo json_encode($aboutUsData);
 } else {
-    // Respuesta de error si la autenticación falla
+    // Respuesta de error de autenticación
     http_response_code(401);
     echo json_encode(["error" => "Unauthorized"]);
 }
-
-
