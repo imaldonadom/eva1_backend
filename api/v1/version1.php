@@ -1,25 +1,44 @@
 <?php
+$_esquema = $_SERVER["REQUEST_SCHEME"];
+$_ubicacion = $_SERVER["HTTP_HOST"];
+$_metodo = $_SERVER["REQUEST_METHOD"];
+$_path = $_SERVER["REQUEST_URI"];
+$_partes = explode('/', $_path);
+$_version = $_ubicacion == 'localhost' ? $_partes[2] : null;
+$_mantenedor = $_ubicacion == 'localhost' ? $_partes[3] : null;
+$_parametros = $_ubicacion == 'localhost' ? $_partes[4] : null;
 
-$_method = $_SERVER['REQUEST_METHOD'];
-$_host = $_SERVER['HTTP_HOST'];
-$_uri = $_SERVER['REQUEST_URI'];
-$_partes = explode('/', $_uri);
+// Validación y procesamiento de parámetros
+if (!empty($_parametros)) {
+    $_parametros = explode('?', $_parametros, 2);
+    if (isset($_parametros[1])) {
+        $_parametros = explode('&', $_parametros[1]);
+    } else {
+        $_parametros = [];
+    }
+} else {
+    $_parametros = [];
+}
 
-//configuración de headers
-header("Access-Control-Allow-Origin: *"); // restriccion de acceso desde otros servidores
-header("Access-Control-ALlow-Methods: GET"); // metodos permitidos
+// Encabezados HTTP
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
 header("Content-Type: application/json; charset=UTF-8");
 
-//Configuración de Authorization
-$_authorization = null;
+$_header = null;
 try {
-    if (isset(getallheaders()['Authorization'])) {
-        $_authorization = getallheaders()['Authorization'];
-        // echo 'tenemos una autorizacion';
-    } else {
-        http_response_code(401);
-        echo json_encode(['error' => 'No tiene autorizacion']);
+    // Obtener encabezados y validar autorización
+    $headers = getallheaders();
+    $_header = isset($headers['Authorization']) ? $headers['Authorization'] : null;
+    
+    if ($_header === null) {
+        throw new Exception('No tiene autorización');
     }
 } catch (Exception $e) {
-    echo 'error';
+    http_response_code(401);
+    echo json_encode(['error' => $e->getMessage()]);
+    exit;
 }
+
+// Ejemplo de token para validación (para pruebas)
+$_token_get = 'Bearer get';
