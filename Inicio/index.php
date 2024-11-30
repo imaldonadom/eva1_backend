@@ -55,7 +55,7 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="Home/">Home</a>
                     <a class="nav-link" href="Nosotros/">Nosotros</a>
-                    <a class="nav-link" href="Nuestro Servicio/">Nuestro Servicio</a>
+                    <a class="nav-link" href="NuestroServicio/">NuestroServicio</a>
                     <a class="nav-link" href="Contactenos/">Contáctenos</a>
                 </div>
             </div>
