@@ -16,5 +16,5 @@ CREATE TABLE clientes (
 -- un select all
 select id, nombre, email, mensaje, fecha_registro from clientes;
 
---un select by id
-select id, nombre, email, mensaje, fecha_registro from clientes where id = x;
+-- un select by id
+select id, nombre, email, mensaje, fecha_registro from clientes where id = 1;
