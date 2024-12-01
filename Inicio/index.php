@@ -45,7 +45,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/eva1_backend/Inicio/">
               <img src="imagenes/logo-dark.png" alt="CONINGENIO Logo" style="height: 40px;">
           </a>   
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="Home/">Home</a>
                     <a class="nav-link" href="Nosotros/">Nosotros</a>
                     <a class="nav-link" href="NuestroServicio/">NuestroServicio</a>
                     <a class="nav-link" href="Contactenos/">Contáctenos</a>
@@ -111,8 +110,8 @@
 <body>
     <div class="content">
         <div class="main">
-            <h1 class="text-center">Ofrecemos el mejor Servicio del pais</h1>
-            <p class="text-center">Navega por nuestro sitio y veras que lo que ofrecemos es lo ideal para aliviar tu dolor, rella nuestro formualrio del item de contactenos. Responderemos enseguida</p>
+            <h1 class="text-center">Su socio para soluciones digitales</h1>
+            <p class="text-center">Proporcionamos el diseño de TI más responsivo y funcional para empresas y negocios de todo el mundo</p>
         </div>
         <footer>
             <div class="container">
@@ -126,10 +125,9 @@
                     <div class="col-md-4 mb-3">
                         <h5>Enlaces</h5>
                         <ul class="list-unstyled">
-                            <li><a href="Home/" class="text-white text-decoration-none">Inicio</a></li>
                             <li><a href="Nosotros/" class="text-white text-decoration-none">Nosotros</a></li>
-                            <li><a href="Servicios/" class="text-white text-decoration-none">Servicios</a></li>
-                            <li><a href="Contacto/" class="text-white text-decoration-none">Contacto</a></li>
+                            <li><a href="NuestroServicio/" class="text-white text-decoration-none">Servicios</a></li>
+                            <li><a href="Contactenos/" class="text-white text-decoration-none">Contacto</a></li>
                         </ul>
                     </div>
                     <div class="col-md-4 mb-3">

@@ -1,41 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>CONINGENIO</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style> 
-        body{
-            background-color: Black;
+        body {
+            background-color: black;
             color: greenyellow;
             font-family: 'Courier New', Courier, monospace;
-            }
+        }
+
+        .navbar-nav .nav-link {
+            background-color: black;
+            color: yellow;
+            margin-right: 10px;
+            border-radius: 5px;
+            padding: 5px 10px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: yellow;
+            color: black;
+        }
+
+        .image-section p {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 1.2rem;
+        }
+
+        .image-section img {
+            display: block;
+            margin: 0 auto;
+            border-radius: 10px;
+        }
     </style>
-
-
-
 </head>
 <body>
-    <a href="../"style="background-color: black; color: orange">Pagina Principal</a>
-    <hr>
-    <h1>
-    Nosotros
-    </h1>
-    <hr>
-    <p class="lh-1">1. Consultoría Digital:
-Nuestro equipo de expertos en consultoría digital ofrece asesoramiento estratégico y soluciones personalizadas para ayudar a las empresas a aprovechar al máximo su presencia en línea. Desde la optimización de la experiencia del usuario hasta la implementación de estrategias de marketing digital, nuestra consultoría digital está diseñada para impulsar el crecimiento y la innovación de tu negocio en el mundo digital.</p>     
-    <p class="lh-1">2. Soluciones Multiexperiencia:
-Con nuestras soluciones multiexperiencia, ofrecemos experiencias de usuario coherentes y personalizadas en todos los dispositivos y plataformas. Desde aplicaciones móviles hasta interfaces de voz y realidad aumentada, ayudamos a las empresas a crear experiencias digitales fluidas y atractivas que conecten con sus clientes en cualquier momento y en cualquier lugar.</p> 
-    <p class="lh-1">3. Evolución de Ecosistemas:
-Nuestra oferta de evolución de ecosistemas se centra en la transformación digital de los procesos empresariales y la optimización de la infraestructura tecnológica. Desde la migración a la nube hasta la integración de sistemas y la implementación de soluciones de Internet de las cosas (IoT), ayudamos a las empresas a evolucionar sus ecosistemas digitales para adaptarse a las demandas cambiantes del mercado y lograr una mayor eficiencia operativa.</p> 
-    <p class="lh-1">4. Soluciones Low-Code:
-Con nuestras soluciones low-code, ofrecemos herramientas y plataformas de desarrollo que permiten a las empresas crear aplicaciones empresariales de forma rápida y rentable, con un mínimo de codificación manual. Nuestro enfoque de desarrollo low-code acelera el tiempo de comercialización y reduce los costos de desarrollo, permitiendo a las empresas innovar y adaptarse más rápidamente a las necesidades del negocio.</p> 
-    <p class="lh-1">Beneficios para los Clientes:</p>
-    <p class="lh-lg">-Soluciones adaptadas a las necesidades específicas de cada empresa.</p>
-    <p class="lh-lg">-Mejora de la eficiencia operativa y la productividad.</p> 
-    <p class="lh-lg">-Mayor alcance y compromiso con los clientes a través de experiencias digitales personalizadas.</p> 
-    <p class="lh-lg">-Reducción de costos y tiempo de desarrollo con enfoques innovadores como el desarrollo low-code.</p> 
-    <p class="lh-lg">-Preparación para el futuro y capacidad de adaptación a medida que evolucionan las tecnologías y las necesidades del mercado.</p> 
-    <p class="lh-lg">Nuestro compromiso es ayudar a nuestros clientes a alcanzar sus objetivos comerciales y superar sus expectativas a través de soluciones digitales innovadoras y orientadas al resultado.</p> 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/eva1_backend/Inicio/">
+              <img src="../imagenes/logo-dark.png" alt="CONINGENIO Logo" style="height: 40px;">
+          </a>   
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../Nosotros/">Nosotros</a>
+                    <a class="nav-link" href="../NuestroServicio/">NuestroServicio</a>
+                    <a class="nav-link" href="../Contactenos/">Contáctenos</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Section -->
+    <section class="image-section" style="margin-top: 65px;">
+    <!-- Imagen -->
+    <img src="../imagenes/imglogin.png" alt="Descripción de la imagen" class="img-fluid d-block mx-auto w-25 bg-black mt-3 img-fluid" style="max-width: 10%; height: auto; display: block; margin-left: 0; border-radius: 60px;">
+    </section> 
+    <section>
+        <div class="container py-5">
+            <div class="row d-flex">
+              <!-- Primer párrafo -->
+              <div class="col-12 col-md-6 mb-3 d-flex">
+                <p class="text-light border border-white p-3 fs-5 w-100 text-center text-wrap" style="min-height: 364px; height: 100%;">
+                  <strong>Misión:</strong><br>
+                  Nuestra misión es brindar soluciones innovadoras y de alta calidad que satisfagan las necesidades y expectativas de nuestros clientes. Nos comprometemos a ofrecer productos y servicios que impulsen el éxito y la transformación en sus negocios, manteniendo siempre un enfoque centrado en el cliente, la excelencia y la responsabilidad social.
+                </p>
+              </div>
+          
+              <!-- Segundo párrafo -->
+              <div class="col-12 col-md-6 mb-3 d-flex">
+                <p class="text-light border border-white p-3 fs-5 w-100 text-center text-wrap" style="min-height: 364px; height: 100%;">
+                  <strong>Visión:</strong><br>
+                  Nos visualizamos como líderes en el mercado global, reconocidos por nuestra capacidad para anticipar y adaptarnos a las demandas cambiantes del entorno empresarial. Aspiramos a ser un referente de innovación, sostenibilidad y excelencia en la industria, creando un impacto positivo en la sociedad y generando valor a largo plazo para nuestros clientes, empleados, accionistas y comunidades en las que operamos.
+                </p>
+              </div>
+            </div>
+          </div>
+   </section>
+   
+   <section>
+    <div class="container d-flex justify-content-center align-items-start ">
+        <div class="row text-center g-1">
+            <!-- Primera fila de 4 elementos -->
+            <div class="col-3 mb-3">
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="../imagenes/facebook.png" class="img-fluid rrss bg-white" alt="Facebook">
+                </a>
+            </div>
+            <div class="col-3 mb-3">
+                <a href="https://www.instagram.com" target="_blank">
+                    <img src="../imagenes/instagram.png" class="img-fluid rrss bg-white" alt="Instagram">
+                </a>
+            </div>
+            <div class="col-3 mb-3">
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="../imagenes/logotipo-de-twitter-sobre-fondo-negro.png" class="img-fluid rrss bg-white" alt="Twitter">
+                </a>
+            </div>
+            <div class="col-3 mb-3">
+                <a href="https://www.tiktok.com" target="_blank">
+                    <img src="../imagenes/tik-tok.png" class="img-fluid rrss bg-white" alt="TikTok">
+                </a>
+            </div>
+            <!-- Segunda fila de 4 elementos -->
+            <div class="col-3 mb-3">
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="../imagenes/youtube.png" class="img-fluid rrss bg-white" alt="YouTube">
+                </a>
+            </div>
+            <div class="col-3 mb-3">
+                <a href="https://www.telegram.com" target="_blank">
+                    <img src="../imagenes/telegrama.png" class="img-fluid rrss bg-white" alt="Telegram">
+                </a>
+            </div>
+            <div class="col-3 mb-3">
+                <a href="https://www.whatsapp.com" target="_blank">
+                    <img src="../imagenes/whatsapp.png" class="img-fluid rrss bg-white" alt="WhatsApp">
+                </a>
+            </div>
+            <div class="col-3 mb-3">
+                <a href="https://www.linkedin.com" target="_blank">
+                    <img src="../imagenes/linkedin.png" class="img-fluid rrss bg-white" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .rrss {
+        width: 60px; 
+        height: auto; 
+        border-radius: 13px;
+    }
+</style>
+
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
