@@ -37,6 +37,19 @@ $base_url = "/eva1_backend/inicio/";
             border-radius: 5px;
             transition: background-color 0.3s ease, color 0.3s ease;
         }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
+        .navbar-nav .nav-link {
+            color: yellow;
+            margin-right: 10px;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
         .navbar-nav .nav-link:hover {
             background-color: yellow;
             color: black;
